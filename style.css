@@ -1,7 +1,137 @@
-.appTitle {
-    color: white;
+* {
+    box-sizing: border-box;
 }
 
-.loginDiv {
-    margin-top: 1em;
+body {
+    background: rgb(59, 59, 59);
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    margin: 20px;
+}
+
+input {
+    padding: 2px;
+    margin-bottom: 8px;
+    border-radius: 0.5em;
+}
+
+button {
+    padding: 5px;
+    background: rgb(154, 175, 137);
+    border-radius: 0.5em;
+    border: 1px solid green;
+    box-shadow: 0 4px 8px 0 black;
+}
+
+button:hover {
+    padding: 5px;
+    background: rgb(154, 175, 137);
+    border-radius: 0.5em;
+    border: 1px solid greenyellow;
+}
+
+button:active {
+    padding: 4px;
+    background: rgb(154, 175, 137);
+    border-radius: 0.5em;
+    border: 1px solid rgb(0, 0, 0);
+    box-shadow: 0 0 0 0;
+}
+
+.logo {
+    height: 60px;
+}
+
+a.title {
+    font-size: 120px;
+    font-weight: 600;
+    color: inherit;
+}
+
+.hiddenLabel {
+    display: none;
+}
+
+.header {
+    color: rgb(173, 173, 173);
+    padding: 10px;
+    display: flex;
+}
+
+#titleLogo {
+    flex: 20%;
+    text-align: left;
+}
+
+#titleText {
+    flex: 50%;
+    text-align: center;
+    font-size: 30px;
+    font-weight: 600;
+    color: inherit;
+}
+
+#loginForm {
+    flex: 30%;
+    text-align: right;
+}
+
+.navbar {
+    display: flex;
+    background-color: #333;
+    margin-top: 20px;
+}
+
+.navbar a {
+    color: rgb(173, 173, 173);
+    padding: 14px 20px;
+    text-decoration: none;
+    text-align: center;
+    border-radius: 0.5em;
+}
+
+.navbar a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+.row {  
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+.main {
+    flex: 70%;
+    padding: 20px;
+}
+
+#crud {
+    padding: 5px;
+}
+
+.side {
+    flex: 30%;
+    padding: 20px;
+    background-color: #333;
+}
+
+footer {
+    padding: 20px;
+    background-color: #333;
+}
+
+@media screen and (max-width: 700px) {
+    .header,
+    .row,
+    .navbar {
+        flex-direction: column;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    #titleLogo,
+    #titleText,
+    #loginForm {
+        flex-direction: column;
+        text-align: center;
+    }
 }

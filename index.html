@@ -1,35 +1,73 @@
 <!DOCTYPE html>
 <html lang="hu">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>DHTE Leltár</title>
     <link rel="stylesheet" href="./style.css">
+    <script src="app.js" defer></script>
 </head>
+
 <body>
+    <div class="header">
+        <div id="titleLogo">
+            <a href="#">
+                <img class="logo" src="./assets/images/bnpi_logo.png" alt="Logo of Bükk National Park Directorate" />
+            </a>
+        </div>
+        <div id="titleText">
+            <p>DHTE Leltár</p>
+        </div>
+        <div id="loginForm">
+            <form action="./login.js">
+                <div>
+                    <label class="hiddenLabel" for="loginUsername">Felhasználónév</label>
+                    <input id="loginUserName" type="text" placeholder="felhasználónév">
+                </div>
+                <div>
+                    <label class="hiddenLabel" for="loginPassword" class="visually-hidden">Jelszó</label>
+                    <input id="loginPassword" type="password" placeholder="jelszó">
+                </div>
+                <div>
+                    <button type="submit" class="btn btn-primary mb-3">Bejelentkezés</button>
+                </div>
+            </form>
+        </div>
+    </div>
     <nav>
-        <div>
-            <img class="logo" src="./assets/images/bnpi_logo.png" alt="Logo of Bükk National Park Directorate"/>
-            <h1 class="title">Bükki Nemzeti Park Igazgatóság <br> Dél-hevesi Tájegység Leltár</h1>
-            <div class="loginDiv">
-                <form action="./login.js" class="loginForm">
-                        <ul>
-                            <li>
-                                <label for="loginUsername">Felhasználónév</label>
-                                <input id="loginUserName" type="text" value="felhasználónév">
-                            </li>
-                            <li>
-                                <label for="loginPassword">Jelszó</label>
-                                <input id="loginPassword" type="text" value="jelszó">
-                            </li>
-                        </ul>
-                </form>
-            </div>
+        <div class="navbar">
+            <a href="#">Főoldal</a>
+            <a href="#">Felelősök</a>
+            <a href="#">Eszközök</a>
+            <a href="#">Excel feltöltés</a>
         </div>
     </nav>
+    <main>
+        <div class="row">
+            <div class="main">
+                <div id="crud">
+                    Jelentkezz be, hogy hozzáférhess a szolgáltatásokhoz!
+                </div>
+                <div id="form">
+                    <input type="text" name="name" placeholder="név" />
+                    <input type="number" name="age" placeholder="életkor" />
+                    <button id="createItem">Mentés</button>
+                  </div>
+            </div>
+            <div class="side">
+                <h2>Segítség</h2>
+                <p>A jobb felső sarokban jelentkezz be, hogy láthasd a tartalmat!</p>
+            </div>
+        </div>
+    </main>
     <footer>
-        
+        <div class="credits">
+            <p>Ferenc Attila</p>
+            <p>2022</p>
+        </div>
     </footer>
 </body>
+
 </html>
